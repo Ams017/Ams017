@@ -40,7 +40,9 @@ class Bullet {
     }
 }
 
-window.addEventListener('click', () => {console.log('go')})
+window.addEventListener('click', () => {
+    console.log('go');
+});
 
 const player = new Player(innerWidth/2, innerHeight/2, 30, 50, 'red');
 player.draw();
