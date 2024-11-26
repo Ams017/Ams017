@@ -28,7 +28,7 @@ class Bullet {
         this.y = y;
         this.radius = radius;
         this.colour = colour;
-        this.velocity = velocity
+        this.velocity = velocity;
 
     }
     draw() {
@@ -40,11 +40,16 @@ class Bullet {
     }
 }
 
-window.addEventListener('click', () => {
-    console.log('go');
+const x = canvas.width / 2;
+const y = canvas.height / 2;
+
+const player = new Player(x, y, 30, 50, 'red');
+player.draw();
+
+window.addEventListener('click', (event) => {
+    const bullet = new Bullet(event.clientX, event.clientY, 5, 'blue', null);
 });
 
-const player = new Player(innerWidth/2, innerHeight/2, 30, 50, 'red');
-player.draw();
+bullet.draw();
 
 console.log(player);
